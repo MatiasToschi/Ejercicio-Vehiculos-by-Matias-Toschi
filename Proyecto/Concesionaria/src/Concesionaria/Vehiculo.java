@@ -1,12 +1,13 @@
 package Concesionaria;
 
-import java.util.Comparator;
+import java.text.DecimalFormat;
 
-public abstract class Vehiculo implements Comparable<Vehiculo>{
+public abstract class Vehiculo {
 
 	private String marca;
 	private String modelo;
 	private float precio;
+	protected DecimalFormat formatoPrecio = new DecimalFormat("###,###.00");
 
 	public Vehiculo(String marca, String modelo, float precio) {
 		this.marca = marca;
@@ -42,14 +43,9 @@ public abstract class Vehiculo implements Comparable<Vehiculo>{
 		return "Marca: " + getMarca() + " //  Modelo: " + getModelo() + " // ";
 	}
 	
-	public int compareTo(Vehiculo otroVehiculo){
-		int resultado = 0;
-		if(this.precio > otroVehiculo.precio){
-			resultado = 1;
-		}else if (this.precio < otroVehiculo.precio) {
-			resultado = -1;
-		}
-		return resultado;
+	
+	protected String imprimirPrecio() {
+		return formatoPrecio.format(getPrecio());
 	}
 
 }

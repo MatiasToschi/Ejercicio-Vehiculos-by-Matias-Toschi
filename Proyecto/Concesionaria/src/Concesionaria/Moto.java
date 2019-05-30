@@ -10,6 +10,7 @@ public class Moto extends Vehiculo {
 	}
 
 	public String toString() {
-		return super.toString() + "Cilindrada: " + cilindrada + " // " + getPrecio();
+		return super.toString() + "Cilindrada: " + cilindrada + "cc // Precio: " + imprimirPrecio();
 	}
 }
+

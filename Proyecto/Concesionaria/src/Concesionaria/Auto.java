@@ -10,7 +10,8 @@ public class Auto extends Vehiculo {
 	}
 	
 	public String toString() {
-		return super.toString() + "Puertas: " + puertas + " // " + getPrecio();
+		return super.toString() + "Puertas: " + puertas + " // Precio:" + imprimirPrecio();
 	}
+
 
 }
